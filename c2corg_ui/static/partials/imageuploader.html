@@ -113,6 +113,8 @@
          ngf-keep="'distinct'"
          ngf-fix-orientation="true"
          ngf-allow-dir="true"
+         ngf-resize-if="uplCtrl.resizeIf($file, $width, $height)"
+         ngf-resize="{width: 2048, height: 2048, quality: 0.9}"
          accept="image/*"
          ngf-pattern="'image/*'">
       <button class="orange-btn btn" type="button" translate>Add images</button>
