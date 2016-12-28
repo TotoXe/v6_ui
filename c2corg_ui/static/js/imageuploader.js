@@ -477,7 +477,9 @@ app.ImageUploaderModalController.prototype.close = function() {
  * @export
  */
 app.ImageUploaderModalController.prototype.save = function() {
+  $('.img-upl-button').addClass('disabled');
   this.scope_['uplCtrl'].save().then(function() {
+    $('.img-upl-button').removeClass('disabled');
     this.modalInstance_.close();
   }.bind(this));
 };
